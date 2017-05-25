@@ -1,14 +1,13 @@
 # 快答开发文档
 
 ## 常用的npm包
-
 * [常用的npm pages](./09.Richard.Wang/npmjs.md)
 
-
+## 项目整体设计
+* [项目需求分析](./kuaida.md)
 
 
 ## workflow
-
 * [github-Workflow](./workflow.md)
 
 
