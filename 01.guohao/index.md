@@ -23,3 +23,9 @@
   * author:{type:'ObjectId',ref:'user'}
 * typeSchema
   * questionIdList:[{type:'ObjectId',ref:'question'}]
+  
+  ### 5月26日工作内容
+  
+ 1. 给数据库增添默认值
+ 1. 用户数据集合增加新字段：
+  * 获得奖金总数   totalReward   {type：Number,default:0}
