@@ -26,7 +26,7 @@ remotes/origin/master     hash值
 ```
 ```
 /* 创建本地分支 */
-> git checkout -b update updateteam
+> git checkout -b update updateteam/master
 ```
 ```
 > git branch -av
