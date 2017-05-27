@@ -79,3 +79,32 @@ do somethings
 10. 在自己的github仓库中的'dev'分支上'create pull request'给主仓库的管理者，等待管理者的审查，合并自身的工作到主仓库
 11. 切换到'master'本地分支，合并本地分支'dev'
 12. 之后的开发流程循环6~12步骤
+
+## github协同开发2
+
+1. 与上面方法的前四步相同
+2. 在master分支上开发，之后将修改保存在缓存区
+```
+git stash save master123
+```
+3. 拉取主仓库最新内容
+```
+git fetch updateteam
+git checkout update
+git pull
+```
+4. 切换到master分支，合并update分支，释放缓存区的内容
+```
+git checkout master
+git stash pop stash@{0}
+git add .
+git commit -a -m "此次提交的工作"
+```
+5. 推送到自己仓库的master分支上，发pull request到主仓库
+```
+git push -u origin master
+```
+6. 如果自己的工作不合格，pull request被驳回，则在master分支上需要退回到“刚开发完工作的那个版本”，进行修改，之后重复2-6步骤
+```
+git reset --hard hash版本号
+```
